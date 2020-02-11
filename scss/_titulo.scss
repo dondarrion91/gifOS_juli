@@ -1,0 +1,83 @@
+.titulo{
+    font-family: 'Chakra Petch', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px;
+    .botones{
+        height: 36px;
+        display: flex;
+        button{
+            font-family: 'Chakra Petch', sans-serif;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: #F7C9F3;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+            width: 144px;
+            height: 36px;
+            margin: 0px 5px;
+        }
+        .drop-container{
+            display: flex;
+            margin: 0px 10px;
+
+            button{
+                
+                margin: 0;
+                
+
+            }
+            div{
+                background: #F7C9F3;
+                border: 1px solid #110038;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                display: flex;
+                height: 34px;
+                width: 36px;
+                border: 1px solid black;
+                i{
+                    margin: auto;
+                    align-self: center;
+                }
+            }
+            
+        }
+        
+        button:nth-child(3){
+            background: none;
+            border: 0;
+            box-shadow: none;
+            width: 100px;
+            font-family: ChakraPetch-Regular;
+            font-size: 16px;
+            color: #110038;
+            letter-spacing: 0;
+            line-height: 18px;
+            text-decoration: underline;
+        }
+        
+    }
+}
+
+@media screen and (max-width:1023px){
+.titulo{
+    flex-direction: column;
+    img{
+        width:100px;
+        align-self: center;
+    }
+    .botones{
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        button{
+            width:100%;
+            margin: 10px;
+        }
+        .drop-container{
+            width: 100%;
+        }
+    }
+}
+}
