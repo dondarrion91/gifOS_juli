@@ -13,7 +13,10 @@
             div{
                 display: flex;
                 margin: auto;
-                height: 48px;
+                @media screen and (min-width:1024px){
+                    height: 48px;
+                }
+                
                 width: 97%;
                 input{
                     @media screen and (min-width:1024px){
@@ -25,7 +28,9 @@
                     box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
                     padding: 16px;
                     font-family: ChakraPetch-Regular;
-                    font-size: 16px;
+                    @media screen and (min-width:1024px){
+                        font-size: 16px;
+                    }
                     color: #B4B4B4;
                     letter-spacing: 0;
                     line-height: 22px;
@@ -33,7 +38,10 @@
                 input::placeholder{
                     padding: 16px;
                     font-family: ChakraPetch-Regular;
-                    font-size: 16px;
+                    @media screen and (min-width:1024px){
+                        font-size: 16px;
+                    }
+                    
                     color: #B4B4B4;
                     letter-spacing: 0;
                     line-height: 22px;
@@ -47,9 +55,13 @@
                     color: #B4B4B4;
                     letter-spacing: 0;
                     line-height: 18px;
-                    width: 102px;
+                    @media screen and (min-width:1024px){
+                        width: 102px;
+                        margin: auto 5px;
+                    }
+                    
                     height: 36px;
-                    margin: auto 5px;
+                    
                     padding: 0;
                 }
             }
@@ -58,15 +70,23 @@
 
 @media screen and (max-width:1023px){
 form{
-    height: 200px;
+    height: 150px;
     div{
         flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
         input{
             align-self: center;
             width:80%;
+            font-size: 11px;
+        }
+        input::placeholder{
+            font-size: 11px;
         }
         button{
             align-self: center;
+            width: 91%;
+            margin: 0;
         }
     }
 }

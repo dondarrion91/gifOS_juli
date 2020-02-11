@@ -162,8 +162,13 @@ header p {
   display: -ms-flexbox;
   display: flex;
   margin: auto;
-  height: 48px;
   width: 97%;
+}
+
+@media screen and (min-width: 1024px) {
+  .buscador form div {
+    height: 48px;
+  }
 }
 
 .buscador form div input {
@@ -173,7 +178,6 @@ header p {
           box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
   padding: 16px;
   font-family: ChakraPetch-Regular;
-  font-size: 16px;
   color: #B4B4B4;
   letter-spacing: 0;
   line-height: 22px;
@@ -185,10 +189,15 @@ header p {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .buscador form div input {
+    font-size: 16px;
+  }
+}
+
 .buscador form div input::-webkit-input-placeholder {
   padding: 16px;
   font-family: ChakraPetch-Regular;
-  font-size: 16px;
   color: #B4B4B4;
   letter-spacing: 0;
   line-height: 22px;
@@ -197,7 +206,6 @@ header p {
 .buscador form div input:-ms-input-placeholder {
   padding: 16px;
   font-family: ChakraPetch-Regular;
-  font-size: 16px;
   color: #B4B4B4;
   letter-spacing: 0;
   line-height: 22px;
@@ -206,7 +214,6 @@ header p {
 .buscador form div input::-ms-input-placeholder {
   padding: 16px;
   font-family: ChakraPetch-Regular;
-  font-size: 16px;
   color: #B4B4B4;
   letter-spacing: 0;
   line-height: 22px;
@@ -215,10 +222,24 @@ header p {
 .buscador form div input::placeholder {
   padding: 16px;
   font-family: ChakraPetch-Regular;
-  font-size: 16px;
   color: #B4B4B4;
   letter-spacing: 0;
   line-height: 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  .buscador form div input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .buscador form div input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .buscador form div input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .buscador form div input::placeholder {
+    font-size: 16px;
+  }
 }
 
 .buscador form div button {
@@ -231,32 +252,55 @@ header p {
   color: #B4B4B4;
   letter-spacing: 0;
   line-height: 18px;
-  width: 102px;
   height: 36px;
-  margin: auto 5px;
   padding: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .buscador form div button {
+    width: 102px;
+    margin: auto 5px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
   form {
-    height: 200px;
+    height: 150px;
   }
   form div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 100%;
   }
   form div input {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
     width: 80%;
+    font-size: 11px;
+  }
+  form div input::-webkit-input-placeholder {
+    font-size: 11px;
+  }
+  form div input:-ms-input-placeholder {
+    font-size: 11px;
+  }
+  form div input::-ms-input-placeholder {
+    font-size: 11px;
+  }
+  form div input::placeholder {
+    font-size: 11px;
   }
   form div button {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    width: 91%;
+    margin: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
