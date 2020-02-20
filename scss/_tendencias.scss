@@ -1,0 +1,8 @@
+@import "sugerencias";
+
+.tendencias{
+    #{&}_header{
+        @include barra_header();
+    }
+    @include gif_body();
+}
