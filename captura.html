@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gifOS</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header>
+        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+    </header>
+
+    <main>
+        <section class="logo_capturas">
+            <a href="./index.html" rel="noopener noreferrer"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <img class="title_capturas" src="./img/gifOF_logo.png" alt="gifOS">
+        </section>
+
+        <section class="reproductor">
+            <div class="video_container">
+                <div class="video_container_header">
+                    <p>#Jonathanvanness</p>
+                    <img class="times" src="./img/button3.svg" alt="">
+                </div>
+
+                <video id="gif_id" src=""></video>
+                <div class="video_container_reproductor">
+                    <div class="button_container">
+                        <button onclick="getMedia()" class="camera"><i class="fa fa-camera" aria-hidden="true"></i></button>
+                        <button id="capturar" class="capturar">Capturar</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+    </main>
+</body>
+<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+<script src="./js/media.js"></script>
+</html>

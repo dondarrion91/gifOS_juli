@@ -1,0 +1,72 @@
+@import "sugerencias";
+
+
+.logo_capturas{
+    display: flex;
+    align-items: center;
+    .title_capturas{
+        margin: 60px 10px;
+    }
+    a{
+        color:black;
+        i{
+            font-size: 32px;
+        }
+    }
+    
+}
+
+.reproductor{
+    .video_container{
+        
+        width: 70%;
+        margin: auto;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        &_header{
+            display: flex;
+            justify-content: space-between;
+            @include barra_header();
+            margin: 0;
+            background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+            p{
+                font-family: ChakraPetch-Bold;
+                font-size: 14px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+            }
+            .times{
+                margin-right: 5px;
+            }
+        }
+        video{
+            width:99.5%;
+            background: #FFFFFF;
+            border: 1px solid #979797;
+            box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+        }
+        &_reproductor{
+            display: flex;
+            justify-content: flex-end;
+            .button_container{
+                width: 150px;
+                display: flex;
+                margin:20px 10px;
+                .camera{
+                    width:36px;
+                    height: 36px;
+                    background: #F7C9F3;
+                    border: 1px solid #110038;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                }
+                .capturar{
+                    width:80%;
+                    height: 36px;
+                    background: #F7C9F3;
+                    border: 1px solid #110038;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                }
+            }
+        }
+    }
+}
