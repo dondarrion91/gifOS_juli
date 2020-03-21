@@ -1,4 +1,5 @@
 @mixin barra_header(){
+    display: flex;
     background: #FFFAFE;
     border: 1px solid #E6BBE2;
     box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
@@ -22,6 +23,8 @@
         display:grid;
         grid-template-columns: repeat(4,25%);
         
+        
+
         &_gif{
             width: 100%;
             display:flex;
@@ -43,7 +46,7 @@
                     align-self:center;
                     padding-left:5px;
                     font-family: ChakraPetch-Bold;
-                    font-size: 14px;
+                    font-size: 10px;
                     color: #FFFFFF;
                     letter-spacing: 0;
                 }

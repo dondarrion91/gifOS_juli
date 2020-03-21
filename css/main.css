@@ -305,6 +305,9 @@ header p {
 }
 
 .sugerencias .sugerencias_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #FFFAFE;
   border: 1px solid #E6BBE2;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
@@ -368,113 +371,7 @@ header p {
       align-self: center;
   padding-left: 5px;
   font-family: ChakraPetch-Bold;
-  font-size: 14px;
-  color: #FFFFFF;
-  letter-spacing: 0;
-}
-
-.sugerencias .sugerencias_content_gif_header .times {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-right: 5px;
-  width: 16px;
-  height: 14px;
-}
-
-.sugerencias .sugerencias_content_gif img {
-  width: 95%;
-  height: 280px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background: #E6E6E6;
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-}
-
-.sugerencias .sugerencias_content_gif button {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: #4180F6;
-  border: 1px solid #4C2F99;
-  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
-  padding: 10px;
-  font-family: ChakraPetch-Regular;
-  font-size: 14px;
-  color: #FFFFFF;
-  letter-spacing: 0;
-  text-align: center;
-  line-height: 18px;
-}
-
-.sugerencias .sugerencias_header {
-  background: #FFFAFE;
-  border: 1px solid #E6BBE2;
-  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
-          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
-  margin-top: 70px;
-  margin-bottom: 20px;
-}
-
-.sugerencias .sugerencias_header p {
-  margin: 0;
-  padding: 7px;
-  font-family: ChakraPetch-Regular;
-  font-size: 14px;
-  color: #110038;
-  letter-spacing: 0;
-}
-
-.sugerencias .sugerencias_content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (25%)[4];
-      grid-template-columns: repeat(4, 25%);
-}
-
-.sugerencias .sugerencias_content_gif {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  margin: 10px 0px;
-}
-
-.sugerencias .sugerencias_content_gif_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 24px;
-  width: 95%;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-}
-
-.sugerencias .sugerencias_content_gif_header p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding-left: 5px;
-  font-family: ChakraPetch-Bold;
-  font-size: 14px;
+  font-size: 10px;
   color: #FFFFFF;
   letter-spacing: 0;
 }
@@ -517,6 +414,9 @@ header p {
 }
 
 .tendencias .tendencias_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #FFFAFE;
   border: 1px solid #E6BBE2;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
@@ -555,12 +455,11 @@ header p {
 }
 
 .tendencias .tendencias_content_gif_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   height: 24px;
   width: 95%;
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -580,7 +479,7 @@ header p {
       align-self: center;
   padding-left: 5px;
   font-family: ChakraPetch-Bold;
-  font-size: 14px;
+  font-size: 10px;
   color: #FFFFFF;
   letter-spacing: 0;
 }
@@ -622,7 +521,16 @@ header p {
   line-height: 18px;
 }
 
+.tendencias .tendencias_content .tendencias_content_gif:hover .tendencias_content_gif_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .sugerencias .sugerencias_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #FFFAFE;
   border: 1px solid #E6BBE2;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
@@ -686,7 +594,7 @@ header p {
       align-self: center;
   padding-left: 5px;
   font-family: ChakraPetch-Bold;
-  font-size: 14px;
+  font-size: 10px;
   color: #FFFFFF;
   letter-spacing: 0;
 }
@@ -764,6 +672,7 @@ header p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: flex;
   background: #FFFAFE;
   border: 1px solid #E6BBE2;
   -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;

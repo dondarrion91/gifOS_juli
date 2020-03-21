@@ -1,8 +1,78 @@
-@import "sugerencias";
+
 
 .tendencias{
-    #{&}_header{
+    
+    .tendencias_header{
         @include barra_header();
     }
-    @include gif_body();
+    
+    #{&}_content{
+        display:grid;
+        grid-template-columns: repeat(4,25%);
+        
+        
+
+        &_gif{
+            width: 100%;
+            display:flex;
+            flex-direction: column;
+            position:relative;
+            margin:10px 0px;
+            &_header{
+                display: none;
+                height: 24px;
+                width:95%;
+                align-self:center;
+                justify-content: space-between;
+                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                p{
+                    margin:0;
+                    padding:0;
+                    border:0;
+                    align-self:center;
+                    padding-left:5px;
+                    font-family: ChakraPetch-Bold;
+                    font-size: 10px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                }
+                .times{
+                    align-self: center;
+                    margin-right: 5px;
+                    width:16px;
+                    height: 14px;
+                }
+            }
+            img{
+                width:95%;
+                height: 280px;
+                align-self:center;
+                background: #E6E6E6;
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            }
+            button{
+                position: absolute;
+                bottom:20px;
+                left:20px;
+                background: #4180F6;
+                border: 1px solid #4C2F99;
+                box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+                padding:10px;
+                font-family: ChakraPetch-Regular;
+                font-size: 14px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+                line-height: 18px;
+            }
+        }
+    }
+    .tendencias_content{
+        .tendencias_content_gif:hover{
+            .tendencias_content_gif_header{
+                display: flex;
+            }
+        }
+    }
 }
