@@ -49,15 +49,20 @@
                 display: none;
                 background: #B4B4B4;
                 box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+                position: relative;
+                z-index: 1;
                 .theme{
                     padding: 0;
+                    width: 100%;
+                    margin: 0;
                     .theme_list{
                         list-style-type: none;
-                        padding: 0;
-                        height: 36px;
-                        background: #FFF4FD;
-                        border: 1px solid #CCA6C9;
-                        box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+                        margin: 10px;
+                        padding: 10px 15px;
+                        
+                        background: #CCCCCC;
+                        border: 1px solid #808080;
+                        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
                     }
                     
                 }
