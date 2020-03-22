@@ -5,6 +5,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #FFF4FD;
 }
 
 main {
@@ -69,14 +70,24 @@ header p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0px 10px;
 }
 
-.titulo .botones .drop-container button {
+.titulo .botones .drop-container .drop-container-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.titulo .botones .drop-container .drop-container-down button {
   margin: 0;
 }
 
-.titulo .botones .drop-container div {
+.titulo .botones .drop-container .drop-container-down div {
   background: #F7C9F3;
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -89,11 +100,32 @@ header p {
   border: 1px solid black;
 }
 
-.titulo .botones .drop-container div i {
+.titulo .botones .drop-container .drop-container-down div i {
   margin: auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.titulo .botones .drop-container .drop-container-menu {
+  display: none;
+  background: #B4B4B4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.titulo .botones .drop-container .drop-container-menu .theme {
+  padding: 0;
+}
+
+.titulo .botones .drop-container .drop-container-menu .theme .theme_list {
+  list-style-type: none;
+  padding: 0;
+  height: 36px;
+  background: #FFF4FD;
+  border: 1px solid #CCA6C9;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
 }
 
 .titulo .botones button:nth-child(3) {

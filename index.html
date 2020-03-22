@@ -17,19 +17,28 @@
 
     <main>
         <section class="titulo">
-            <img src="./img/gifOF_logo.png" alt="gifOS">
+            <img src="./img/gifOF_logo.png" id="tituloImagen" alt="gifOS">
             <div class="botones">
                 <button class="crear">Crear Guifos</button>
 
                 <div class="drop-container">
-                    <button>
-                        Elegir tema
-                        
-                    </button>
-                    <div>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <div class="drop-container-down">
+                        <button>
+                            Elegir tema
+                            
+                        </button>
+                        <div onclick="mostrarMenu()">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
                     </div>
                     
+                    
+                    <div class="drop-container-menu">
+                        <ul class="theme">
+                            <li class="theme_list" onclick="ligthTheme()">Saylor Day</li>
+                            <li class="theme_list" onclick="darkTheme()">Saylor Night</li>
+                        </ul>
+                    </div>
                     
                 </div>
                 
@@ -115,5 +124,5 @@
     
 </body>
 <script src="./js/giphy.js"></script>
-
+<script src="./js/theme.js"></script>
 </html>

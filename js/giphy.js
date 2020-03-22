@@ -14,7 +14,9 @@ async function getRandomResults() {
     try{
         const response = await fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}`)
         let data = await response.json();
+        
         let arrayData = data.data;
+        
         let arrayUrl = []; 
         arrayData.map(element => {
             arrayUrl.push(element);
@@ -54,6 +56,7 @@ async function getSuggestion(){
 
 function mostrarTendencias(){
     let contenedorGif = document.getElementById("tendecias_content");
+    
     getRandomResults()
         .then(data => data.map(element => {
             contenedorGif.innerHTML += `
