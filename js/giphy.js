@@ -10,18 +10,17 @@ async function getSearchResults(search) {
         }  
 }
 
+
+
 async function getRandomResults() {
     try{
         const response = await fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}`)
+                                                                                    
         let data = await response.json();
         
         let arrayData = data.data;
-        
-        let arrayUrl = []; 
-        arrayData.map(element => {
-            arrayUrl.push(element);
-        });
-        return arrayUrl;
+        console.log(arrayData);
+        return arrayData;
     }catch(e){
         return e;
     }  
@@ -54,8 +53,13 @@ async function getSuggestion(){
     }
 }
 
+
+
 function mostrarTendencias(){
+
     let contenedorGif = document.getElementById("tendecias_content");
+
+    
     
     getRandomResults()
         .then(data => data.map(element => {
@@ -76,15 +80,16 @@ mostrarTendencias();
 
 let sugerencia = document.getElementsByClassName("sugerenciaGif");
 let sugerenciaTitle = document.getElementsByClassName("sugerencias_content_gif_header_text");
-for(let i=0;i<sugerencia.length;i++){
-    console.log(sugerencia[i])
-}
+// for(let i=0;i<sugerencia.length;i++){
+//     console.log(sugerencia[i])
+// }
 
-console.log(sugerenciaTitle)
+// console.log(sugerenciaTitle)
 
 getSuggest()
         .then(data => {
             for(let i=0;i<sugerencia.length;i++){
+                console.log(data[i]);
                 sugerencia[i].src = data[i].data.images.original.url;
                 sugerenciaTitle[i].innerHTML = data[i].data.title;
                 
