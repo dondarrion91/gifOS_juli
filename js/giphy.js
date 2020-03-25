@@ -4,7 +4,8 @@ async function getSearchResults(search) {
         try{
             const response = await fetch(`https://api.giphy.com/v1/gifs/search?q=${search}&api_key=${API_KEY}`)
             let data = await response.json();
-            return data; 
+            let arrayData = data.data;
+            return arrayData; 
         }catch(e){
             return e;
         }  
@@ -43,15 +44,7 @@ async function getSuggest(){
     
 }
 
-async function getSuggestion(){
-    try{
-        const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=${API_KEY}&s=hola`);
-        let data = await response.json();
-        return data;
-    }catch(e){
-        console.log(e);
-    }
-}
+
 
 
 
@@ -66,7 +59,7 @@ function mostrarTendencias(){
             contenedorGif.innerHTML += `
             <div class="tendencias_content_gif">
                 
-                <img src="${element.images.original.url}" alt="">
+                <img class="tendencias_content_gif_image" src="${element.images.original.url}" alt="">
                 <div class="tendencias_content_gif_header">
                     <p>#${element.title}</p>
                     
@@ -101,19 +94,54 @@ getSuggest()
         })
         .catch(e => console.log(e))    
         
-        
 
+let formSearch = document.getElementById("formSearch");
+let search = document.getElementById("search");
+
+search.addEventListener("keyup",e =>{
+    if (event.keyCode === 13) {
+        
+        e.preventDefault();
+        mostrarData();
+        
+      }
+    
+})
+
+
+
+formSearch.addEventListener("submit",e => {
+    e.preventDefault();
+    
+})
 
 function mostrarData(){
-    let search = document.getElementById("search").value;
+
+    let searchValue = document.getElementById("search").value;
+    let sugerenciasContainer = document.getElementsByClassName("sugerencias")[0];
+    let tendenciasImage = document.getElementsByClassName("tendencias_content_gif_image");
+    let tendenciasTitle = document.getElementsByClassName("tendencias_content_gif_header");
+    let tendenciasHeader = document.getElementsByClassName("tendencias_header_text")[0];
+    contenedorGif = document.getElementById("tendecias_content");
     
-    getSearchResults(search)
-        .then(data => console.log(data))
+    sugerenciasContainer.style.display = "none";
+    tendenciasHeader.innerHTML = "Resultado de la busqueda"
+    getSearchResults(searchValue)
+        .then(data => {
+            contenedorGif.style.display = "none";
+            for(let i=0;i<tendenciasImage.length;i++){
+                
+                tendenciasImage[i].src = data[i].images.original.url;
+                tendenciasTitle[i].innerHTML = data[i].title;
+                
+            }
+        },setTimeout(() =>{
+            contenedorGif.style.display = "grid";
+        },3000))
+
         .catch(e => console.log(e))
 
-    getSuggestion()
-        .then(data => console.log(data))
-        .catch(e => console.log(e))
+
 }
 
 
