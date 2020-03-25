@@ -21,7 +21,13 @@
     
     #{&}_content{
         display:grid;
-        grid-template-columns: repeat(4,25%);
+        @media screen and (min-width:769px){
+            grid-template-columns: repeat(4,25%);
+        }
+
+        @media screen and (max-width:768px){
+            grid-template-columns: repeat(1,100%);
+        }
         
         
 
