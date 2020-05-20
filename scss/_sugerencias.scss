@@ -95,3 +95,27 @@
     }
     @include gif_body();
 }
+
+.botonesSuggestion{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botonSugerencia{
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100px;
+    height: 34px;
+    background: #4180F6;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+    font-family: ChakraPetch-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 18px;
+    list-style-type: none;
+}

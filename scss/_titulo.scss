@@ -6,7 +6,7 @@
     .botones{
         height: 36px;
         display: flex;
-        button{
+        a{
             font-family: 'Chakra Petch', sans-serif;
             margin: 0;
             padding: 0;
@@ -16,7 +16,13 @@
             box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
             width: 144px;
             height: 36px;
-            margin: 0px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            p{
+                margin: 0;
+            }
         }
         .drop-container{
             display: flex;
@@ -25,6 +31,10 @@
             .drop-container-down{
                 
                 display: flex;
+                height: 100%;
+                @media screen and (max-width:1024px){
+                    justify-content: center;
+                }
                 button{
                 
                     margin: 0;
@@ -32,11 +42,19 @@
     
                 }
                 div{
+                    @media screen and (max-width:1023px){
+                        display: none;
+                    }
+
+                    @media screen and (min-width:1024px){
+                        display: flex;
+                    }
+
                     background: #F7C9F3;
                     border: 1px solid #110038;
                     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
                     display: flex;
-                    height: 34px;
+                    height: 100%;                    
                     width: 36px;
                     border: 1px solid black;
                     i{
@@ -94,6 +112,11 @@
         align-self: center;
     }
     .botones{
+        a{
+            @media screen and (max-width:1024px){
+                margin: 10px 0px;
+            }
+        }
         flex-direction: column;
         height: 100%;
         align-items: center;

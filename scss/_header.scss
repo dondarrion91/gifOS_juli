@@ -16,8 +16,15 @@
         height: 16px;
         p{  
             margin: 0;
-            padding: 0;
-            font-size: 12px;
+            padding: 0;                     
+            @media screen and (max-width:1023px){
+                font-size: 7px;    
+            }   
+            
+            @media screen and (min-width:1024px){
+                font-size: 12px;     
+            } 
+    
             font-family: 'Chakra Petch', sans-serif;
             color: #FFFFFF;
         }

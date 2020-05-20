@@ -4,8 +4,9 @@ let body = document.getElementsByTagName("body")[0];
 let darkButton = document.getElementsByClassName("darkButton"); // Devuelve un objeto que contiene los elementos con la
                                                                 // clase dark button
 let misGifos = document.getElementsByClassName("mis_guifos")[0];                                                                
-
+let verMasTheme = document.getElementsByClassName("verMas");
 let header = document.getElementsByTagName("header");
+let searchSubmit = document.getElementById("searchSubmit");
 let headerTrending;
 let headerSuggest;
 
@@ -24,12 +25,10 @@ if(!localStorage.getItem("dark")){
 }
 
 function onLoadTheme(){
-
-  setTimeout(() =>{
-
+  
     headerTrending = document.getElementsByClassName("tendencias_content_gif_header");
     headerSuggest = document.getElementsByClassName("sugerencias_content_gif_header");
-    console.log(headerTrending)
+    
     if (localStorage.getItem("dark") == "true") {
   
       for(let i=0;i<header.length;i++){
@@ -59,6 +58,15 @@ function onLoadTheme(){
         darkButton[i].style.backgroundColor = "#F7C9F3";
         darkButton[i].style.color = "#110038";
       }
+
+      for (i = 0; i < verMasTheme.length; i++) {          
+        verMasTheme[i].style.backgroundColor = "#4180F6";
+        verMasTheme[i].style.color = "#FFFFFF";
+      }
+
+      searchSubmit.addEventListener("click",() => {
+        searchSubmit.style.backgroundColor = "#F7C9F3";
+      });
       
       misGifos.style.color = "#110038";
     
@@ -87,17 +95,21 @@ function onLoadTheme(){
         darkButton[i].style.backgroundColor = "#EE3EFE";
         darkButton[i].style.color = "#FFFFFF";
       }
+
+      for (i = 0; i < verMasTheme.length; i++) {          
+        verMasTheme[i].style.backgroundColor = "#EE3EFE";
+        verMasTheme[i].style.color = "#FFFFFF";
+      }
+
+      searchSubmit.addEventListener("click",() => {
+        searchSubmit.style.backgroundColor = "#EE3EFE";
+      });
     
       misGifos.style.color = "#FFFFFF";
     }
-  },1000)
+  
   
 }
-
-
-
-
-
 
 
   function mostrarMenu() {
@@ -112,8 +124,7 @@ function onLoadTheme(){
 
   function darkTheme() {
     headerTrending = document.getElementsByClassName("tendencias_content_gif_header");
-    headerSuggest = document.getElementsByClassName("sugerencias_content_gif_header");
-    console.log(headerTrending)
+    headerSuggest = document.getElementsByClassName("sugerencias_content_gif_header");    
     if (localStorage.getItem("dark") == "true") {
 
         for(let i=0;i<header.length;i++){
@@ -139,6 +150,15 @@ function onLoadTheme(){
           darkButton[i].style.backgroundColor = "#EE3EFE";
           darkButton[i].style.color = "#FFFFFF";
         }
+
+        for (i = 0; i < verMasTheme.length; i++) {          
+          verMasTheme[i].style.backgroundColor = "#EE3EFE";
+          verMasTheme[i].style.color = "#FFFFFF";
+        }
+        
+        searchSubmit.addEventListener("click",() => {
+          searchSubmit.style.backgroundColor = "#EE3EFE";
+        });
 
         misGifos.style.color = "#FFFFFF";
 
@@ -186,7 +206,16 @@ function onLoadTheme(){
           darkButton[i].style.color = "#110038";
         }
 
+        for (i = 0; i < verMasTheme.length; i++) {          
+          verMasTheme[i].style.backgroundColor = "#4180F6";
+          verMasTheme[i].style.color = "#FFFFFF";
+        }
+
         misGifos.style.color = "#110038";
+
+        searchSubmit.addEventListener("click",() => {
+          searchSubmit.style.backgroundColor = "#F7C9F3";
+        });
         
         localStorage.setItem("dark", true);
 

@@ -1,6 +1,36 @@
 
-
     .buscador{
+        &Lista{
+            display: none;
+            list-style: none;
+            background: #E6E6E6;
+            margin: 0;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            padding: 0;
+            padding: 16px 0px;
+            height: 210px;
+            overflow: overlay;
+            li{
+                background: #CCCCCC;
+                border: 1px solid #808080;
+                box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+                list-style-type: none;                                
+                margin-left: 16px;
+                margin-right: 16px;    
+                margin-bottom: 10px;            
+                p{
+                    margin: 0;
+                    font-family: ChakraPetch-Regular;
+                    font-size: 16px;
+                    color: #110038;
+                    letter-spacing: 0;
+                    line-height: 22px;
+                    padding: 6px 0px;
+                    padding-left: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
         form{
             @media screen and (min-width: 1024px){
                 height: 76px;
@@ -91,3 +121,4 @@ form{
     }
 }
 }
+

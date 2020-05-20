@@ -78,6 +78,8 @@
         .tendencias_content_gif:hover{
             .tendencias_content_gif_header{
                 display: flex;
+                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                box-shadow: 0 1px 0 0 #110038;
             }
         }
     }

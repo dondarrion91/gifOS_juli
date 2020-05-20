@@ -12,21 +12,22 @@
 <body>
     
     <header>
-        <p id="visitors">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+        <p id="visitors">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: </p>
     </header>
 
     <main>
         <section class="titulo">
-            <img src="" id="tituloImagen" alt="gifOS">
+            <h2 style="display:none;">ALGOALGO</h2>
+            <img src="./img/something" id="tituloImagen" alt="gifOS">
             <div class="botones">
-                <button class="crear darkButton">Crear Guifos</button>
+                <a href="./captura.html" class="crear darkButton"><p>Crear Guifos</p></a>
 
                 <div class="drop-container">
                     <div class="drop-container-down">
-                        <button class="tema darkButton">
-                            Elegir tema
+                        <a onclick="mostrarMenu()" class="tema darkButton">
+                            <p>Elegir tema</p>
                             
-                        </button>
+                        </a>
                         <div onclick="mostrarMenu()" class="darkButton" id="dropButton">
                             <i class="fa fa-chevron-down" aria-hidden="true"></i>
                         </div>
@@ -47,22 +48,30 @@
         </section>
         
         <section class="buscador">
+            <h2 style="display:none;">ALGOALGO</h2>
             <header>
                 <p>Buscar</p>
             </header>
 
-            <form action="" id="formSearch">
+            <form id="formSearch">
                 <div>
-                    <input type="text" name="search" id="search" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                    <button type="button" id="searchSubmit" onclick="mostrarData()">
+                    <input autocomplete="off" type="text" name="search" id="search" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                    <button type="button" id="searchSubmit" onclick="mostrarData(search.value)">
                         <i class="fa fa-search" aria-hidden="true">Buscar</i>
                     </button>
                 </div>
                 
             </form>
+            <ul class="buscadorLista">
+                <!-- Contenido dinamico -->
+            </ul>
+            <ul class="botonesSuggestion">
+                <!-- Contenido dinamico -->
+            </ul>
         </section>
 
         <section class="sugerencias">
+            <h2 style="display:none;">ALGOALGO</h2>
             <div class="sugerencias_header">
                 <p>Hoy te sugerimos:</p>
             </div>
@@ -73,7 +82,7 @@
                         <p class="sugerencias_content_gif_header_text"></p>
                         <img class="times" src="./img/button3.svg" alt="">
                     </div>
-                    <img src="" class="sugerenciaGif" alt="">
+                    <img src="./img/something" class="sugerenciaGif" alt="">
                     <button class="verMas">Ver más...</button>
                 </div>
                 <div class="sugerencias_content_gif">
@@ -82,7 +91,7 @@
                         <img class="times" src="./img/button3.svg" alt="">
                         <button class="verMas">Ver más...</button>
                     </div>
-                    <img src="" class="sugerenciaGif" alt="">
+                    <img src="./img/something" class="sugerenciaGif" alt="">
                 </div>
                 <div class="sugerencias_content_gif">
                     <div class="sugerencias_content_gif_header">
@@ -90,7 +99,7 @@
                         <img class="times" src="./img/button3.svg" alt="">
                         <button class="verMas">Ver más...</button>
                     </div>
-                    <img src="" class="sugerenciaGif" alt="">
+                    <img src="./img/something" class="sugerenciaGif" alt="">
                 </div>
                 <div class="sugerencias_content_gif">
                     <div class="sugerencias_content_gif_header">
@@ -98,12 +107,13 @@
                         <img class="times" src="./img/button3.svg" alt="">
                         <button class="verMas">Ver más...</button>
                     </div>
-                    <img src="" class="sugerenciaGif" alt="">
+                    <img src="./img/something" class="sugerenciaGif" alt="">
                 </div>
             </div>
         </section>
 
         <section class="tendencias">
+            <h2 style="display:none;">ALGOALGO</h2>
             <div class="tendencias_header">
                 <p class="tendencias_header_text">Tendencias:</p>
             </div>
@@ -114,9 +124,10 @@
             </div>
         </section>
     </main>
-    
-</body>
+
 <script src="./js/giphy.js"></script>
 <script src="./js/theme.js"></script>
 <script src="./js/app.js"></script>
+</body>
+
 </html>

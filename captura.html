@@ -14,34 +14,285 @@
 
     <main>
         <section class="logo_capturas">
+            <h2 style="display:none">ALGOALGO</h2>
             <a href="./index.html" rel="noopener noreferrer"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-            <img class="title_capturas" src="./img/gifOF_logo.png" alt="gifOS">
+            <img class="title_capturas" src="./img/something" alt="gifOS">
         </section>
 
-        <section class="reproductor">
-            <div class="video_container">
-                <div class="video_container_header">
-                    <p>#Jonathanvanness</p>
-                    <img class="times" src="./img/button3.svg" alt="">
+        <section class="reproductor" id="reproductor">
+            <h2 style="display:none">ALGOALGO</h2>
+            <!-- INTRO -->
+            <div class="video_container" id="precheck">
+                <div class="video_container_header" id="video_container_header">
+                    <p>Crear Guifos</p>                    
                 </div>
+                
+                <div class="video_container_body">
+                    <div class="video_container_body_title">
+                        <img src="./img/window_img.png" alt="">
+                        <h4>Aquí podrás crear tus propios guifos</h4>
+                    </div>    
+                    
+                    <div class="video_container_body_content">
+                        <p>Crear tu <strong>guifo</strong> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:</p>
+                        <ul>
+                            <li><strong>1)</strong> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</li>
+                            <li><strong>2)</strong> Capturar tu momento guifo</li>
+                            <li><strong>3)</strong> Revisar el momento</li>
+                            <li><strong>4)</strong> Listo para subir y compartir!</li>                           
+                        </ul>   
+                        <p>¿Quieres comenzar a crear tu guifo ahora?</p>                          
+                    </div>
 
-                <video id="gif_id" src=""></video>
-                <div class="video_container_reproductor">
+                    <div class="video_container_body_buttons">
+                        <button class="cancelarButton" id="cancelarButton">Cancelar</button>
+                        <button class="comenzarButton" id="comenzarButton">Comenzar</button>
+                    </div>
+                </div>
+                <!-- INTRO -->
+
+
+                
+
+                
+                <!-- <div class="video_container_reproductor">
                     <div class="button_container">
                         <button onclick="getMedia()" class="camera"><i class="fa fa-camera" aria-hidden="true"></i></button>
                         <button id="capturar" class="capturar">Capturar</button>
                     </div>
                     
+                </div> -->
+            </div>
+
+            <!-- VIDEO SUBIDO -->
+            
+            <div class="uploadedVideo" id="uploadedVideo" style="display: none;">
+                <div class="uploadedGifHeader">
+                    <h2 class="uploadedText">Guifo Subido Con Éxito</h2>
                 </div>
+                <img class="uploadedGif" id="uploadedGifElement" src="https://media0.giphy.com/media/3oz8xI5c0K0hFPwmGI/giphy.gif?cid=b4b47d798a4ba0837086214d4bf80017217c7e2bb37dfece&rid=giphy.gif" alt="gif">
+                <div class="buttonFinished">
+                    <h2>Guifo creado con éxito</h2>
+                    <button class="copiarEnlace" id="copiarEnlace">
+                        <span>Copiar Enlace Guifo</span>
+                    </button>
+                    <a href="#" class="copiarEnlace" id="descargarEnlace" download="tuGif">
+                        <p>Descargar Guifo</p>
+                    </a>
+                    <button class="listoButton" id="listoButton">Listo</button>
+                </div>                
+            </div>
+
+            <!-- VIDEO SUBIDO -->
+            
+            <!-- VIDEO -->
+            <div class="video_container" id="camaraContainer" style="display: none;">
+                <div class="video_container_header">
+                    <p>Un Chequeo Antes de Empezar</p>                    
+                </div>
+
+                <div class="video_container_body_rec">
+                    <video autoplay id="video"></video>
+                    <img id="gif" src="./img/something" alt="gif sample" style="display: none;">
+                    <div style="display: none;" class="subida">
+                        <img src="./img/globe_img.png" alt="foto globo">
+                        <h2>Estamos subiendo tu guifo…</h2>
+                        <div class="barraSubida">
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                            <div class="progreso"></div>
+                        </div>
+                        <div>
+                            <p class="tiempoRestante">Tiempo restante: <del>38 años</del> algunos minutos</p>
+                        </div>
+                    </div>
+
+                    <div class="cancelarBotonPost" id="cancelarBotonPost" style="display: none;">
+                        <button id="abortarPost">Cancelar</button>
+                    </div>
+                    
+                    <div class="timer subidaNone" id="timer">
+                        <p>
+                            <span id="horas">00</span>:
+                            <span id="minutos">00</span>:
+                            <span id="segundos">00</span>:
+                            <span id="milisegundos">00</span>
+                        </p>
+                    </div>
+
+                    <div class="barraProgreso subidaNone">
+                        <div class="barraProgresoPlay" id="barraProgresoPlay">
+                            <img src="./img/forward.svg" alt="">
+                        </div>
+                        <div class="barraProgresoProgress" id="barraProgresoProgress">
+                            <div class="bloque"></div>
+                            <div class="bloque"></div>
+                            <div class="bloque"></div>
+                            <div class="bloque"></div>
+                            <div class="bloque"></div>
+                            <div class="bloque"></div>
+                            <div class="bloque"></div>
+                            <div class="bloque"></div>
+                            <div class="bloque"></div>   
+                            <div class="bloque"></div>   
+                            <div class="bloque"></div>   
+                            <div class="bloque"></div>                       
+                        </div>
+                    </div>
+
+                    <div class="button_container subidaNone" id="containerRecord" style="display: none;">
+                        <button class="cancelarButton" id="repetirButton" style="margin: 0px 5px;">Repetir Captura</button>
+                        <button class="comenzarButton" id="subirButton" style="margin: 0px 5px;">Subir Guifo</button>
+                    </div>
+                    
+                    <div class="button_container subidaNone" id="startRecordButtons">                                                    
+                        <div class="icon_container">
+                            <img src="./img/camera.svg" id="iconImg" alt="">                            
+                        </div>  
+                        
+                        <button type="button" id="botonGrabarListo" style="display: none;">                        
+                            <span id="botonGrabarText1">Listo</span>
+                        </button>                      
+                        <button type="button" id="botonGrabar">                        
+                            <span id="botonGrabarText">Capturar</span>
+                        </button>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+            <!-- VIDEO -->
+        </section>
+
+        <section class="misGuifos">
+            <h2 style="display:none">ALGOALGO</h2>
+            <div class="misGuifosHeader">
+                <p class="misGuifosHeaderText">Mis guifos</p>
+            </div>
+
+            <div class="misGuifosBody">
+                <!-- GIFS -->
             </div>
         </section>
         
-        <button id="prub"></button>
-
-        <img href="" id="prueba" alt=""></img>
+        
 
     </main>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="./js/media.js"></script>
+    <script>
+        let title_capturas = document.getElementsByClassName("title_capturas")[0];
+        let body = document.querySelector("body");
+        let header = document.querySelector("header");            
+        let video_container_header = document.getElementById("video_container_header");    
+        let button = document.querySelectorAll("button");   
+        let cancelarButtonTheme = document.getElementsByClassName("cancelarButton");
+        let comenzarButtonTheme = document.getElementsByClassName("comenzarButton");
+        let botonGrabarTheme = document.getElementById("botonGrabar");
+        let icon_containerTheme = document.getElementsByClassName("icon_container")[0];
+        let barraProgresoPlayTheme = document.getElementById("barraProgresoPlay");
+        let copiarEnlaceTheme = document.getElementById("copiarEnlace");
+        let descargarEnlaceTheme = document.getElementById("descargarEnlace");
+        let listoButtonTheme = document.getElementById("listoButton");
+        let abortarPostTheme = document.getElementById("abortarPost");
+        
+        
+        
+    
+        if(!JSON.parse(localStorage.getItem("dark"))){
+            title_capturas.src = "./img/gifOF_logo_dark.png";
+            body.style.backgroundColor = "#110038";  
+            header.style.backgroundImage = "linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%)";  
+            header.style.boxShadow = "0 1px 0 0 #110038";
+            video_container_header.style.backgroundImage = "linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%)";  
+            video_container_header.style.boxShadow = "0 1px 0 0 #110038"; 
+            barraProgresoPlayTheme.style.backgroundColor = "#EE3EFE";
+    
+            // Boton de Cancelar  
+            for(let i=0;i<cancelarButtonTheme.length;i++){
+                cancelarButtonTheme[i].style.backgroundColor = "#110038"      
+                cancelarButtonTheme[i].style.color = "#FFF"      
+                cancelarButtonTheme[i].style.border = "#FFF"
+            }              
+            
+            // Boton de Comenzar  
+            for(let i=0;i<comenzarButtonTheme.length;i++){
+                comenzarButtonTheme[i].style.backgroundColor = "#110038"      
+                comenzarButtonTheme[i].style.color = "#FFF"      
+                comenzarButtonTheme[i].style.border = "#FFF"
+            }         
+    
+            // Boton de Captruar  
+            botonGrabarTheme.style.backgroundColor = "#EE3EFE"      
+            botonGrabarTheme.style.color = "#FFF"      
+            botonGrabarTheme.style.border = "#FFF" 
+            icon_containerTheme.style.backgroundColor = "#EE3EFE"      
+            icon_containerTheme.style.color = "#FFF"      
+            icon_containerTheme.style.border = "#FFF" 
+    
+            // Subida
+            copiarEnlaceTheme.style.backgroundColor = "#110038";
+            descargarEnlaceTheme.style.backgroundColor = "#110038";
+            copiarEnlaceTheme.style.color = "#FFF";
+            descargarEnlaceTheme.style.color = "#FFF";
+            listoButtonTheme.style.backgroundColor = "#EE3EFE";
+            abortarPostTheme.style.backgroundColor = "#EE3EFE";
+            
+    
+    
+            
+        }else{               
+            title_capturas.src = "./img/gifOF_logo.png";     
+            body.style.backgroundColor = "#FFF4FD";  
+            header.style.backgroundImage = "linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%)";  
+            header.style.boxShadow = "0 1px 0 0 #110038";
+            video_container_header.style.backgroundImage = "linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%)";  
+            video_container_header.style.boxShadow = "0 1px 0 0 #110038";   
+            barraProgresoPlayTheme.style.backgroundColor = "#F7C9F3";
+    
+            // Boton de Cancelar  
+            for(let i=0;i<cancelarButtonTheme.length;i++){
+                cancelarButtonTheme[i].style.backgroundColor = "#FFF4FD"      
+                cancelarButtonTheme[i].style.color = "#000"      
+                cancelarButtonTheme[i].style.border = "1px solid #110038"
+            }              
+            
+            // Boton de Comenzar  
+            for(let i=0;i<comenzarButtonTheme.length;i++){
+                comenzarButtonTheme[i].style.backgroundColor = "#F7C9F3"      
+                comenzarButtonTheme[i].style.color = "#000"      
+                comenzarButtonTheme[i].style.border = "1px solid #110038"
+            }      
+        }
+    </script>
 </body>
-<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-<script src="./js/media.js"></script>
+
+
 </html>
